@@ -135,7 +135,6 @@ Create a batch file named on the desktop. The batch file need to have a variable
 
 
 ```bash
-notepad 1.bat
 
 @echo off
 set name=John
@@ -161,7 +160,6 @@ Repeat the process if the user enters Y, and exit with a thank-you message if th
 Handle invalid inputs for the continuation prompt (Y/N) gracefully.
 
 ```bash
-notepad 2.bat
 
 @echo off
 :main
@@ -194,7 +192,6 @@ Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1
 
 
 ```bash
-notepad 3.bat
 
 @echo off
 for %%i in (1 2 3 4 5) do (
