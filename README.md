@@ -28,7 +28,7 @@ Create a directory named "my-folder"
 ## COMMAND AND OUTPUT
 
 
-```
+```bash
 mkdir my-folder
 ```
 
@@ -39,7 +39,7 @@ Remove the directory "my-folder"
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 rmdir my-folder
 ```
 
@@ -50,7 +50,7 @@ Create the file Rose.txt
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 COPY CON Rose.txt
 A clock in a office can never get stolen
 Too many employees watch it all the time
@@ -65,7 +65,7 @@ Create the file hello.txt using echo and redirection
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 echo “hello world” > hello.txt
 type hello.txt
 
@@ -79,7 +79,7 @@ Copy the file hello.txt into the file hello1.txt
 ## COMMAND AND OUTPUT
 
 
-```
+```bash
 copy hello.txt hello1.txt
 
 ```
@@ -90,7 +90,7 @@ Remove the file hello1.txt
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 del hello1.txt
 
 
@@ -102,7 +102,7 @@ List out the file hello1.txt in the current directory
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 dir hello1.txt
 ```
 
@@ -112,18 +112,17 @@ List out all the associated file extensions
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 assoc | more
 ```
 
 ![assoc](./img/8.png)
 
-
 Compare the file hello.txt and rose.txt
 
 ## COMMAND AND OUTPUT
 
-```
+```bash
 fc hello.txt Rose.txt
 
 ```
@@ -135,7 +134,7 @@ fc hello.txt Rose.txt
 Create a batch file named on the desktop. The batch file need to have a variable assigned with a desired name for ex. name="John" and display as "Hello, John".
 
 
-```
+```bash
 notepad 1.bat
 
 @echo off
@@ -161,7 +160,7 @@ Ask the user if they want to check another number.
 Repeat the process if the user enters Y, and exit with a thank-you message if the user enters N.
 Handle invalid inputs for the continuation prompt (Y/N) gracefully.
 
-```
+```bash
 notepad 2.bat
 
 @echo off
@@ -194,7 +193,7 @@ pause
 Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1 to 5) and displays each number with the label Number:. The output should pause at the end.
 
 
-```
+```bash
 notepad 3.bat
 
 @echo off
@@ -220,6 +219,17 @@ Make sure the script works for files located in the same directory as the batch 
 Use pause to keep the command window open after displaying the message.
 Expected Output (if the file exists):
 
+```bash
+@echo off
+if exist sample.txt (
+    echo sample.txt exists.
+) else (
+    echo sample.txt does not exist.
+)
+pause
+
+```
+
 ## OUTPUT
 
 ![bat4](./img/14.png)
@@ -231,6 +241,30 @@ Create a File – Creates a file named newfile.txt with the content This is a ne
 Exit – Exits the script with a goodbye message
 The script should repeatedly display the menu until the user chooses to exit. Use goto statements to handle menu navigation.
 
+```bash
+@echo off
+:menu
+echo 1. Say Hello
+echo 2. Create a File
+echo 3. Exit
+set /p choice=Choose an option: 
+if "%choice%"=="1" goto hello
+if "%choice%"=="2" goto createfile
+if "%choice%"=="3" goto end
+
+:hello
+echo Hello, World!
+goto menu
+
+:createfile
+echo Creating a file...
+echo This is a new file > newfile.txt
+goto menu
+:end
+echo Goodbye!
+pause
+
+```
 
 ## OUTPUT
 
