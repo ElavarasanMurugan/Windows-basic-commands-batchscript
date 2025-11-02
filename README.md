@@ -127,7 +127,7 @@ fc hello.txt Rose.txt
 
 ```
 
-![fcc](./img/10.png)
+![fcc](./img/9.png)
 
 
 ## Exercise 2: Advanced Batch Scripting
@@ -149,7 +149,7 @@ pause
 ## OUTPUT
 
 
-![bat2](./img/11.png)
+![bat2](./img/10.png)
 
 Create a batch file  on the desktop that checks whether a user-input number is odd or not. The script should:
 Prompt the user to enter a number.
@@ -186,7 +186,7 @@ pause
 ## OUTPUT
 
 
-![bat2](./img/12.png)
+![bat2](./img/11.png)
 
 Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1 to 5) and displays each number with the label Number:. The output should pause at the end.
 
@@ -204,7 +204,7 @@ pause
 
 ## OUTPUT
 
-![bat3](./img/13.png)
+![bat3](./img/12.png)
 
 
 
@@ -229,7 +229,7 @@ pause
 
 ## OUTPUT
 
-![bat4](./img/14.png)
+![bat4](./img/13.png)
 
 
 Write a batch script that displays a simple menu with three options:
@@ -265,7 +265,7 @@ pause
 
 ## OUTPUT
 
-![bat5](./img/15.png)
+![bat5](./img/14.png)
 
 
 # RESULT:
